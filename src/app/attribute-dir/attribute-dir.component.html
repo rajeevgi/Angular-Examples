@@ -1,0 +1,76 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>Attribute Dir</h1>
+    <p>[ngClass], [ngStyle]</p>
+</div>
+
+<div class="row pt-3">
+    <div class="col-3">
+        <div class="p-3 text-center" [ngClass]="div1BgColor">
+            <h3>Div-1</h3>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="p-3 text-center" [ngClass]="isDiv2Active ? 'bg-success':'bg-warning'">
+            <h3>Div-2</h3>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="p-3 text-center" [ngClass]="num1 == num2 ? 'bg-success':'bg-danger'">
+            <h3>Div-3</h3>
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-danger" (click)="addRedColor()">Add Red</button>
+        <button class="btn btn-primary mx-2" (click)="addBlueColor()">Add Blue</button>
+    </div>
+    <div class="col-3 text-center">
+        <button class="btn btn-success" (click)="changeColor()">Toggle</button>
+    </div>
+    <div class="col-3 text-center">
+        <input type="text" [(ngModel)]="num1" placeholder="num1" class="w-50">
+        <input type="text" [(ngModel)]="num2" placeholder="num2" class="w-50">
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-6">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>State</th>
+                    <th>Status</th>
+                    <th>Total Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of studentList">
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.gender}}</td>
+                    <td>{{student.state}}</td>
+                    <td [ngStyle]="{'background-color' : student.status ? 'Green' : 'Red' }">
+                        <span>{{ student.status ? 'Active' : 'De-Active' }}</span>
+                    </td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar" [ngStyle]="{'width':student.marks + '%' }">
+                                {{student.marks}}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-6">
+        <div [ngStyle]="customStyle">
+            Styled Div
+        </div>
+    </div>
+</div>
