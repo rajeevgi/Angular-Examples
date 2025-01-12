@@ -1,0 +1,56 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>Pipe Example In Angular</h1>
+    <h3>Default Pipe and Custom Pipe</h3>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <b>Original Value</b> - {{firstName}}
+        <br>
+        <b>after Pipe</b> - {{firstName | uppercase }}
+    </div>
+    <div class="col-3">
+        <b>Original Value</b> - {{firstName}}
+        <br>
+        <b>after Pipe</b> - {{firstName | lowercase}}
+    </div>
+    <div class="col-3">
+        <b>Original Value</b> - {{firstName}}
+        <br>
+        <b>after Pipe</b> - {{firstName | titlecase}}
+    </div>
+    <div class="col-3">
+        <b>Original Value</b> - {{currentDate}}
+        <br>
+        <b>after Pipe</b> - {{currentDate | date}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <b>Original value</b> - {{currentDate}}
+        <br>
+        <b>after Pipe</b> - {{currentDate | date:"dd-MM-yy"}}
+    </div>
+    <div class="col-3">
+        <b>Original value</b> - {{currentDate}}
+        <br>
+        <b>after Pipe</b> - {{currentDate | date:"dd-MMM-yy"}}
+    </div>
+    <div class="col-3">
+        <b>Original value</b> - {{currentDate}}
+        <br>
+        <b>after Pipe</b> - {{currentDate | date:"dd-MMM-yyy"}}
+    </div>
+    <div class="col-3">
+        <b>Original value</b> - {{currentDate}}
+        <br>
+        <b>after Pipe</b> - {{currentDate | date:"dd/MMM/yy"}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <b>Original Value</b> - {{student}}
+        <br>
+        <b>after Pipe</b> - {{student | json}}
+    </div>
+</div>

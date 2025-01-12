@@ -12,16 +12,20 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="attri-dir">AttriDir</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="pipe">Pipe</a>
+        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <select class="dropdown-menu">
+            <option><a class="dropdown-item" routerLink="attri-dir">AttriDir</a></option>
+            <option><a class="dropdown-item" routerLink="struct-dir">StructDir</a></option>
+            <option><a class="dropdown-item" routerLink="pipe">Pipe</a></option>
+            <option><hr class="dropdown-divider"></option>
+            <option><a class="dropdown-item" routerLink="app-dir">Home</a></option>
+          </select>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
